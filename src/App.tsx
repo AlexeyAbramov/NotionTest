@@ -3,11 +3,12 @@ import data from "./mock/data-min.json";
 import "./App.css";
 import { IUserInfo } from "./types/users";
 import { convertBirthday, convertFullName, convertLocation } from "./helpers/data-convertor";
+import { Table, TableContainer } from "./styled/Table";
 
 const App: React.FC = () => (
   <div className="App">
-    <div className="table-wrapper">
-      <table className="table">
+    <TableContainer>
+      <Table>
         <thead className="thead">
           <tr className="thead__row">
             <th className="thead__col thead__cell-image">Avatar</th>
@@ -51,8 +52,8 @@ const App: React.FC = () => (
             );
           })}
         </tbody>
-      </table>
-    </div>
+      </Table>
+    </TableContainer>
   </div>
 );
 
