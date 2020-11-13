@@ -1,29 +1,31 @@
 export interface UserApiResponse {
-  results: IUserInfo[],
-  info: ApiResponseInfo,
+  results: IUserInfo[];
+  info: ApiResponseInfo;
 }
 
 export interface ApiResponseInfo {
-  seed: string,
-  results: number,
-  page: number,
-  version: string,
+  seed: string;
+  results: number;
+  page: number;
+  version: string;
 }
 
 export interface IUserInfo {
-  gender: string,
-  name: UserName,
-  location: UserLoc,
-  email: string,
-  login: UserLoginData,
-  dob: UserBirthday,
-  registered: UserRegDate,
-  phone: string,
-  cell: string,
-  id: UserID,
-  picture: UserPicture,
-  nat: string,
+  gender: UserGenderType | string;
+  name: UserName;
+  location: UserLoc;
+  email: string;
+  login: UserLoginData;
+  dob: UserBirthday;
+  registered: UserRegDate;
+  phone: string;
+  cell: string;
+  id: UserID;
+  picture: UserPicture;
+  nat: string;
 }
+
+export type UserGenderType = "male" | "female";
 
 export interface UserName {
   title: string;
@@ -57,32 +59,32 @@ export interface UserLocTimezone {
 }
 
 export interface UserLoginData {
-  uuid: string,
-  username: string,
-  password: string,
-  salt: string,
-  md5: string,
-  sha1: string,
-  sha256: string,
+  uuid: string;
+  username: string;
+  password: string;
+  salt: string;
+  md5: string;
+  sha1: string;
+  sha256: string;
 }
 
 export interface UserBirthday {
-  date: string,
-  age: number,
+  date: string;
+  age: number;
 }
 
 export interface UserRegDate {
-  date: string,
-  age: number,
+  date: string;
+  age: number;
 }
 
 export interface UserID {
-  name: string,
-  value: string,
+  name: string;
+  value: string | null;
 }
 
 export interface UserPicture {
-  large: string,
-  medium: string,
-  thumbnail: string,
+  large: string;
+  medium: string;
+  thumbnail: string;
 }
