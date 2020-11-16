@@ -3,6 +3,7 @@ import { convertBirthday, convertFullName, convertLocation } from "../helpers/da
 import { TableCell, TableContainer, TableHead, TableWrapper } from "../styled/Table";
 import { IUserInfo } from "../types/users";
 import data from "../mock/data-min.json";
+import { ClipCopy } from "./ClipCopy";
 
 const Table: React.FC = () => (
   <TableWrapper>
@@ -35,17 +36,15 @@ const Table: React.FC = () => (
               <TableCell>
                 <a href="/">{fullName}</a>
               </TableCell>
+              <TableCell>{convertBirthday(user.dob)}</TableCell>
               <TableCell>
-                {convertBirthday(user.dob)}
+                <ClipCopy href={`mailto:${email}`}>{email}</ClipCopy>
               </TableCell>
               <TableCell>
-                <a href={`mailto:${email}`}>{email}</a>
+                <ClipCopy href={`tel:${phone}`}>{phone}</ClipCopy>
               </TableCell>
               <TableCell>
-                <a href={`tel:${phone}`}>{phone}</a>
-              </TableCell>
-              <TableCell>
-                {convertLocation(user.location)}
+                <ClipCopy>{convertLocation(user.location)}</ClipCopy>
               </TableCell>
               <TableCell align="right">
                 <p className="cell-nation">{country}</p>
