@@ -1,9 +1,10 @@
 import React from "react";
 import { convertBirthday, convertFullName, convertLocation } from "../helpers/data-convertor";
-import { TableCell, TableContainer, TableHead, TableWrapper } from "../styled/Table";
+import { TableCell, TableContainer, TableHead, TableWrapper, UserNation } from "../styled/Table";
 import { IUserInfo } from "../types/users";
 import data from "../mock/data-min.json";
 import { ClipCopy } from "./ClipCopy";
+import { getRandomColor } from "../js/helpers";
 
 const Table: React.FC = () => (
   <TableWrapper>
@@ -47,7 +48,7 @@ const Table: React.FC = () => (
                 <ClipCopy>{convertLocation(user.location)}</ClipCopy>
               </TableCell>
               <TableCell align="right">
-                <p className="cell-nation">{country}</p>
+                <UserNation color={getRandomColor()}>{country}</UserNation>
               </TableCell>
             </tr>
           );

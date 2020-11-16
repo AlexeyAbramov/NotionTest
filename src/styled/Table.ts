@@ -26,5 +26,15 @@ export const TableCell = styled.th<{ width?: string }>`
   width: ${(props) => props.width || "16%"};
   padding: 0.7rem;
   white-space: pre-wrap;
-  text-align: ${(props) => props.align || "left"}
+  text-align: ${(props) => props.align || "left"};
+`;
+
+export const UserNation = styled.p<{ color?: string }>`
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid ${(props) => props.color || "#cc416f"};
+  border-radius: 3px;
+  font-weight: 600;
+  color: ${(props) => props.color || "#cc416f"};
+  background-color: ${(props) => (props.color ? `${props.color}1A` : "#cc416f1A")};
 `;

@@ -1,15 +1,22 @@
 import copy from "copy-to-clipboard";
-import React from "react";
-import { ClipButton, ClipImage, ClipWrapper } from "../styled/ClipCopy";
+import React, { useState } from "react";
+import { SHOW_POPUP_TIME } from "../js/constants";
+import { ClipButton, ClipImage, ClipWrapper, SuccessMessage } from "../styled/ClipCopy";
 
 export interface ClipCopyProp {
   href?: string;
 }
 
 const ClipCopy: React.FC<ClipCopyProp> = ({ children, href }) => {
+  const [successCopy, setSuccessCopy] = useState(false);
+
   const copyToClip = () => {
     if (typeof children === "string") {
-      copy(children);
+      const status = copy(children);
+      setSuccessCopy(status);
+      setTimeout(() => {
+        setSuccessCopy(false);
+      }, SHOW_POPUP_TIME);
     }
   };
 
@@ -17,6 +24,7 @@ const ClipCopy: React.FC<ClipCopyProp> = ({ children, href }) => {
     <ClipWrapper>
       <ClipButton type="button" onClick={copyToClip}>
         <ClipImage />
+        {successCopy && <SuccessMessage>Скопировано!</SuccessMessage>}
       </ClipButton>
       {href ? <a href={href}>{children}</a> : <p>{children}</p>}
     </ClipWrapper>
