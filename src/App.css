@@ -51,11 +51,14 @@ a {
 
 .thead__col {
   font-weight: 600;
-  padding: 0 .7rem;
+  padding: .7rem .7rem;
+  width: 16%;
+  
 }
 
 .thead__row {
   background-color: rgb(240, 240, 240);
+  font-weight: 600;
 }
 
 .thead__cell-image {
@@ -70,10 +73,9 @@ a {
 /* CELLS STYLES */
 
 .tbody__cell {
-  width: 16%;
   border-bottom: 1px solid  rgb(240, 240, 240);
   white-space: pre-wrap;
-  padding: .5rem .7rem;
+  padding: .7em .7rem;
 }
 
 /* CELL IMAGE */
@@ -85,7 +87,7 @@ a {
 }
 
 .cell-image {
-  width: 60%;
+  width: 4rem;
   display: block;
   margin: 0 auto;
   border-radius: 50%;
