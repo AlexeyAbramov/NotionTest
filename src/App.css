@@ -16,12 +16,11 @@ body {
 a {
   text-decoration: none;
   color: #2aa2ff;
-  color: #128ce9;
 }
 
 .App {
   text-align: center;
-  background-color: rgb(240, 240, 240);
+  background-color: #f0f0f0;
   padding: 2rem 3rem;
   width: 100%;
   height: 100vh;
@@ -93,36 +92,6 @@ a {
   margin: 0 auto;
   border-radius: 50%;
 }
-
-/* CELL NAME  */
-
-.tbody__cell-name {
-
-}
-
-/* CELL BIRTH  */
-
-.tbody__cell-name {
-  
-}
-/* CELL EMAIL  */
-
-.tbody__cell-name {
-  
-}
-/* CELL PHONE  */
-
-.tbody__cell-name {
-  
-}
-
-/* CELL LOCATION  */
-
-.tbody__cell-name {
-  
-}
-
-/* CELL NATION */
 
 .tbody__cell-nation {
   text-align: right;

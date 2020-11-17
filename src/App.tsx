@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import { Table } from "./components/Table";
+import { Contacts } from "./pages/Contacts";
 
 const App: React.FC = () => (
-  <div className="App">
-    <Table />
-  </div>
+  <>
+    <Contacts />
+  </>
 );
 
 export { App };
