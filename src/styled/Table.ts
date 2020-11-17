@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const TableWrapper = styled.div`
-  width: 95%;
-  margin: 20px auto;
+  width: 100%;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.1);

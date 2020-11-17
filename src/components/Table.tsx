@@ -4,7 +4,7 @@ import { TableCell, TableContainer, TableHead, TableWrapper, UserNation } from "
 import { IUserInfo } from "../types/users";
 import data from "../mock/data-min.json";
 import { ClipCopy } from "./ClipCopy";
-import { getRandomColor } from "../js/helpers";
+import { getColor } from "../js/helpers";
 
 const Table: React.FC = () => (
   <TableWrapper>
@@ -48,7 +48,7 @@ const Table: React.FC = () => (
                 <ClipCopy>{convertLocation(user.location)}</ClipCopy>
               </TableCell>
               <TableCell align="right">
-                <UserNation color={getRandomColor()}>{country}</UserNation>
+                <UserNation color={getColor()}>{country}</UserNation>
               </TableCell>
             </tr>
           );
