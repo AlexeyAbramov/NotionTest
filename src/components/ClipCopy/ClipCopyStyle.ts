@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { ReactComponent as CopyImg } from "../images/copy.svg";
+import { ReactComponent as CopyImg } from "../../images/copy.svg";
 
 const show = keyframes` 
   from {

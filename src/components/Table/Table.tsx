@@ -1,10 +1,11 @@
 import React from "react";
-import { convertBirthday, convertFullName, convertLocation } from "../helpers/data-convertor";
-import { TableCell, TableContainer, TableHead, TableHeadRow, TableWrapper, UserAvatar, UserNation } from "../styled/Table";
-import { IUserInfo } from "../types/users";
-import data from "../mock/data-min.json";
-import { ClipCopy } from "./ClipCopy";
-import { getColor } from "../js/helpers";
+import { convertBirthday, convertFullName, convertLocation } from "../../helpers/data-convertor";
+import { TableCell, TableContainer, TableHead, TableHeadRow, TableWrapper, UserAvatar, UserNation } from "./TableStyle";
+import { IUserInfo } from "../../types/users";
+import data from "../../mock/data-min.json";
+// import data from "../mock/data.json";
+import { ClipCopy } from "../ClipCopy/ClipCopy";
+import { getColor } from "../../js/helpers";
 
 const Table: React.FC = () => (
   <TableWrapper>

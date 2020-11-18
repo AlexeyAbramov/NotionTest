@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const TableWrapper = styled.div`
   width: 100%;
   padding: 20px;
+  margin: 10px 0;
   background-color: ${({ theme }) => theme.colors.second_bg};
   box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.1);
 `;

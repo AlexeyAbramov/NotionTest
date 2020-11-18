@@ -1,7 +1,7 @@
 import React from "react";
-import { RadioBlock } from "../componentsHelpers/RadioBlock";
-import { ReloadButton, SettingPanelWrapper } from "../styled/SettingPanel";
-import { ReactComponent as RefreshImg } from "../images/refresh.svg";
+import { RadioBlock } from "../../componentsHelpers/RadioBlock/RadioBlock";
+import { ReloadButton, SettingPanelWrapper } from "./SettingPanelStyle";
+import { ReactComponent as RefreshImg } from "../../images/refresh.svg";
 
 const SettingPanel: React.FC = () => {
   return (

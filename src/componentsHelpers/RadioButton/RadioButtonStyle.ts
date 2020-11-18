@@ -1,18 +1,8 @@
 import styled from "styled-components";
 
-export const RadioBlockWrapper = styled.div`
-  display: flex;
-  border: 1px solid ${({ theme }) => theme.colors.main_bg_d};
-  border-radius: 3px;
-  overflow: hidden;
-`;
-
 export const RadioInput = styled.input`
   position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+  appearance: none;
 `;
 
 export const RadioLabel = styled.label`

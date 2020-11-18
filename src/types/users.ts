@@ -38,7 +38,7 @@ export interface UserLoc {
   city: string;
   state: string;
   country: string;
-  postcode: number;
+  postcode: number | string;
   coordinates: UserLocCoord;
   timezone: UserLocTimezone;
 }

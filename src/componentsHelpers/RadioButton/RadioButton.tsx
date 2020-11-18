@@ -1,5 +1,5 @@
 import React from "react";
-import { RadioInput, RadioContainer, RadioLabel } from "../styled/Radio";
+import { RadioInput, RadioContainer, RadioLabel } from "./RadioButtonStyle";
 
 export interface RadioButtonProps {
   id: string;
