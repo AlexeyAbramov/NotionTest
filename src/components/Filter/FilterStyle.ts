@@ -1,11 +1,9 @@
 import styled from "styled-components";
+import { ContainerStyle } from "../../assets/styles/CommonStyles";
 
-export const FilterWrapper = styled.div`
+export const FilterWrapper = styled(ContainerStyle)`
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding: 2rem;
-  box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.1);
 `;
 
 export const ClearButton = styled.button`

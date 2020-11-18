@@ -1,7 +1,7 @@
 import React from "react";
 import { RadioButton } from "../RadioButton/RadioButton";
-import { ReactComponent as ListImg } from "../../images/list.svg";
-import { ReactComponent as BlocksImg } from "../../images/blocks.svg";
+import { ReactComponent as ListImg } from "../../assets/images/list.svg";
+import { ReactComponent as BlocksImg } from "../../assets/images/blocks.svg";
 import { RadioBlockWrapper } from "./RadioBlockStyle";
 
 const buttons = [

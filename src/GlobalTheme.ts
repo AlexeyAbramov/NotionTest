@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: ${theme.defFont};
     color: ${theme.colors.font};
   }
 

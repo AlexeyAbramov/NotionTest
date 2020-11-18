@@ -7,7 +7,7 @@ import {
   FilterSubmit,
   InputWrapper,
 } from "./FilterStyle";
-import { ReactComponent as SearchImg } from "../../images/search.svg";
+import { ReactComponent as SearchImg } from "../../assets/images/search.svg";
 import { OptionSelect } from "../../componentsHelpers/OptionSelect/OptionSelect";
 
 const Filter: React.FC = () => {

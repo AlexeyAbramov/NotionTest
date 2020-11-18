@@ -1,4 +1,4 @@
-import { UserBirthday, UserLoc } from "../types/users";
+import { UserBirthday, UserLoc } from "../../types/users";
 
 export const convertFullName = (title: string, first: string, last: string): string =>
   `${title}. ${first} ${last}`;

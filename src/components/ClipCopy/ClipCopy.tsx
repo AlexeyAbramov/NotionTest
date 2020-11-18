@@ -1,6 +1,6 @@
 import copy from "copy-to-clipboard";
 import React, { useState } from "react";
-import { SHOW_POPUP_TIME } from "../../js/constants";
+import { SHOW_POPUP_TIME } from "../../assets/js/constants";
 import { ClipButton, ClipImage, ClipWrapper, SuccessMessage } from "./ClipCopyStyle";
 
 export interface ClipCopyProp {

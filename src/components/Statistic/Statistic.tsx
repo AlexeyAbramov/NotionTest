@@ -1,11 +1,10 @@
 import React from "react";
+import { StatisticWrapper } from "./StatisticStyle";
 
 const Statistic: React.FC = () => (
-  <div>
-    <div>
-      <h2>Statistic</h2>
-    </div>
-  </div>
+  <StatisticWrapper>
+    <h2>Statistic</h2>
+  </StatisticWrapper>
 );
 
 export { Statistic };
