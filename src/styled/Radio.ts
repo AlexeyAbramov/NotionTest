@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const RadioBlockWrapper = styled.div`
   display: flex;
-  border: 1px solid #cccccc;
+  border: 1px solid ${({ theme }) => theme.colors.main_bg_d};
   border-radius: 3px;
   overflow: hidden;
 `;
@@ -13,7 +13,6 @@ export const RadioInput = styled.input`
   height: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
-
 `;
 
 export const RadioLabel = styled.label`
@@ -25,18 +24,17 @@ export const RadioLabel = styled.label`
   transition: background-color 0.3s ease;
 
   & > svg {
-    fill: #525252;
+    fill: ${({ theme }) => theme.colors.font};
     transition: fill 0.3s ease;
   }
 
   ${RadioInput}:checked + & {
-    background-color: #2aa2ff;
+    background-color: ${({ theme }) => theme.colors.links};
   }
 
   ${RadioInput}:checked + & > svg {
     fill: white;
   }
-
 `;
 
 export const RadioContainer = styled.div`

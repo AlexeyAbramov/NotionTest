@@ -19,8 +19,9 @@ export const ClipWrapper = styled.div`
 export const ClipImage = styled(CopyImg)`
   width: 1.5rem;
   height: 1.5rem;
-  fill: #2aa2ff;
-  transition: fill 0.3s ease;
+  fill: ${({ theme }) => theme.colors.links};
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
 `;
 
 export const ClipButton = styled.button`
@@ -36,8 +37,13 @@ export const ClipButton = styled.button`
   }
 
   :hover ${ClipImage} {
-    fill: #128ce9;
+    opacity: 1;
   }
+
+  :focus ${ClipImage} {
+    box-shadow: 0 0 5px 2px ${({ theme }) => theme.colors.links};
+  }
+
 `;
 
 export const SuccessMessage = styled.p`

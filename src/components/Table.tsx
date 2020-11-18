@@ -1,6 +1,6 @@
 import React from "react";
 import { convertBirthday, convertFullName, convertLocation } from "../helpers/data-convertor";
-import { TableCell, TableContainer, TableHead, TableWrapper, UserNation } from "../styled/Table";
+import { TableCell, TableContainer, TableHead, TableHeadRow, TableWrapper, UserAvatar, UserNation } from "../styled/Table";
 import { IUserInfo } from "../types/users";
 import data from "../mock/data-min.json";
 import { ClipCopy } from "./ClipCopy";
@@ -10,7 +10,7 @@ const Table: React.FC = () => (
   <TableWrapper>
     <TableContainer>
       <TableHead>
-        <tr className="thead__row">
+        <TableHeadRow className="thead__row">
           <TableCell width="7rem" align="center">
             Avatar
           </TableCell>
@@ -20,7 +20,7 @@ const Table: React.FC = () => (
           <TableCell>Phone</TableCell>
           <TableCell>Location</TableCell>
           <TableCell align="right">Nationality</TableCell>
-        </tr>
+        </TableHeadRow>
       </TableHead>
       <tbody className="tbody">
         {data.results.map((user: IUserInfo) => {
@@ -32,7 +32,7 @@ const Table: React.FC = () => (
           return (
             <tr key={user.phone}>
               <TableCell width="5%">
-                <img className="cell-image" src={user.picture.thumbnail} alt="avatar" />
+                <UserAvatar className="cell-image" src={user.picture.thumbnail} alt="avatar" />
               </TableCell>
               <TableCell>
                 <a href="/">{fullName}</a>
