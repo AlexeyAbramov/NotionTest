@@ -11,7 +11,7 @@ const Table: React.FC = () => (
   <TableWrapper>
     <TableContainer>
       <TableHead>
-        <TableHeadRow className="thead__row">
+        <TableHeadRow>
           <TableCell width="7rem" align="center">
             Avatar
           </TableCell>
@@ -23,7 +23,7 @@ const Table: React.FC = () => (
           <TableCell align="right">Nationality</TableCell>
         </TableHeadRow>
       </TableHead>
-      <tbody className="tbody">
+      <tbody>
         {data.results.map((user: IUserInfo) => {
           const { phone, email } = user;
           const { first, last, title } = user.name;

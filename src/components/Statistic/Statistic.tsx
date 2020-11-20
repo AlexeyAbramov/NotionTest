@@ -1,9 +1,18 @@
 import React from "react";
-import { StatisticWrapper } from "./StatisticStyle";
+import { StatInfoBlock } from "../StatInfoBlock/StatInfoBlock";
+import { StatNationBlock } from "../StatNationBlock/StatNationBlock";
+import { StatisticWrapper, StatisticTitle, StatInfoList } from "./StatisticStyle";
 
 const Statistic: React.FC = () => (
   <StatisticWrapper>
-    <h2>Statistic</h2>
+    <StatisticTitle>Statistic</StatisticTitle>
+    <StatInfoList>
+      <StatInfoBlock title="Collection size" value="12" />
+      <StatInfoBlock title="Males" value="8" />
+      <StatInfoBlock title="Females" value="4" />
+      <StatInfoBlock title="Inderminate" value="0" />
+    </StatInfoList>
+    <StatNationBlock />
   </StatisticWrapper>
 );
 
