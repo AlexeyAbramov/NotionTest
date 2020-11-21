@@ -15,7 +15,7 @@ const Filter: React.FC = () => {
     <FilterWrapper>
       <FilterForm>
         <InputWrapper width="60%">
-          <FilterInput placeholder="Search by full name" type="text" name="" id="" />
+          <FilterInput placeholder="Search by full name" type="text" name="" />
           <FilterSubmit type="submit">
             <SearchImg />
           </FilterSubmit>
