@@ -6,15 +6,16 @@ export const PaginationContainer = styled.div`
   align-self: flex-end;
 `;
 
-export const PaginationButton = styled.button`
+export const PaginationButton = styled.button<{ active?: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
   background-color: transparent;
-  border: none;
-  color: inherit;
+  border-radius: 3px;
+  border: ${({ active, theme }) => (active ? `1px solid ${theme.colors.links}` : "none")};
+  color: ${({ active, theme }) => (active ? `${theme.colors.links}` : "inherit")};
   font-family: inherit;
   font-weight: 600;
   cursor: pointer;

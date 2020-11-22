@@ -26,6 +26,13 @@ export const getSortedContacts = createSelector(
 export const getContactParts = createSelector(
   [getSortedContacts, getPageCapacity, getCurrentPage],
   (contacts, pageCapacity, page) => {
-    return contacts.slice(((page - 1) * pageCapacity), (page * pageCapacity));
+    return contacts.slice((page - 1) * pageCapacity, page * pageCapacity);
+  },
+);
+
+export const getPageCount = createSelector(
+  [getSortedContacts, getPageCapacity],
+  (contacts, pageCapacity) => {
+    return Math.ceil(contacts.length / pageCapacity);
   },
 );

@@ -16,6 +16,11 @@ export const contactsReducer = (state = initialState, action: ContactsActions): 
         ...state,
         data: action.payload,
       };
+    case ContactActionType.SET_PAGE:
+      return {
+        ...state,
+        currentPage: action.payload,
+      };
     default:
       return state;
   }
