@@ -34,4 +34,8 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: ${theme.colors.links};
   }
+
+  #root {
+    position: relative;
+  }
 `;

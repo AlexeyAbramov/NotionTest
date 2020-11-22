@@ -1,15 +1,6 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { ReactComponent as CopyImg } from "../../assets/images/copy.svg";
-
-const show = keyframes` 
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-`;
+import { opacityInAnim } from "../../assets/styles/CommonAnimation";
 
 export const ClipWrapper = styled.div`
   display: flex;
@@ -43,16 +34,15 @@ export const ClipButton = styled.button`
   :focus ${ClipImage} {
     box-shadow: 0 0 5px 2px ${({ theme }) => theme.colors.links};
   }
-
 `;
 
 export const SuccessMessage = styled.p`
   position: absolute;
-  animation: ${show} 0.5s ease;
+  animation: ${opacityInAnim} 0.5s ease;
   padding: 7px 12px;
   border-radius: 5px;
   border: 1px solid black;
-  background-color: rgba(0,0,0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   font-size: 1.1rem;
 `;
