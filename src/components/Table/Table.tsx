@@ -1,13 +1,22 @@
 import React from "react";
-import { convertBirthday, convertFullName, convertLocation } from "../../assets/js/data-convertor";
-import { TableCell, TableContainer, TableHead, TableHeadRow, TableWrapper, UserAvatar, UserNation } from "./TableStyle";
+import { getFormatedData } from "../../assets/js/data-convertor";
+import {
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableHeadRow,
+  TableWrapper,
+  UserAvatar,
+  UserNation,
+} from "./TableStyle";
 import { IUserInfo } from "../../types/users";
-import data from "../../mock/data-min.json";
-// import data from "../mock/data.json";
 import { ClipCopy } from "../ClipCopy/ClipCopy";
-import { getColor } from "../../assets/js/helpers";
 
-const Table: React.FC = () => (
+export interface TableProps {
+  data: IUserInfo[];
+}
+
+const Table: React.FC<TableProps> = ({ data }) => (
   <TableWrapper>
     <TableContainer>
       <TableHead>
@@ -24,21 +33,26 @@ const Table: React.FC = () => (
         </TableHeadRow>
       </TableHead>
       <tbody>
-        {data.results.map((user: IUserInfo) => {
-          const { phone, email } = user;
-          const { first, last, title } = user.name;
-          const { country } = user.location;
-          const fullName = convertFullName(title, first, last);
+        {data.map((user: IUserInfo) => {
+          const {
+            birthday,
+            email,
+            fullName,
+            location,
+            phone,
+            national,
+            nationalColor,
+          } = getFormatedData(user);
 
           return (
-            <tr key={user.phone}>
+            <tr key={phone}>
               <TableCell width="5%">
                 <UserAvatar className="cell-image" src={user.picture.thumbnail} alt="avatar" />
               </TableCell>
               <TableCell>
                 <a href="/">{fullName}</a>
               </TableCell>
-              <TableCell>{convertBirthday(user.dob)}</TableCell>
+              <TableCell>{birthday}</TableCell>
               <TableCell>
                 <ClipCopy href={`mailto:${email}`}>{email}</ClipCopy>
               </TableCell>
@@ -46,10 +60,12 @@ const Table: React.FC = () => (
                 <ClipCopy href={`tel:${phone}`}>{phone}</ClipCopy>
               </TableCell>
               <TableCell>
-                <ClipCopy>{convertLocation(user.location)}</ClipCopy>
+                <ClipCopy>{location}</ClipCopy>
               </TableCell>
               <TableCell align="right">
-                <UserNation color={getColor()}>{country}</UserNation>
+                <UserNation color={nationalColor.color} inverted={nationalColor.inverted}>
+                  {national}
+                </UserNation>
               </TableCell>
             </tr>
           );

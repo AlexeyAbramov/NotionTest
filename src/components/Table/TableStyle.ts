@@ -31,14 +31,25 @@ export const TableCell = styled.th<{ width?: string }>`
   text-align: ${(props) => props.align || "left"};
 `;
 
-export const UserNation = styled.p<{ color?: string }>`
+export const UserNation = styled.p<{ color?: string; inverted?: boolean }>`
   display: inline-block;
   padding: 0.3rem 0.8rem;
   border: 1px solid ${(props) => props.color || "#cc416f"};
   border-radius: 3px;
   font-weight: 600;
-  color: ${(props) => props.color || "#cc416f"};
-  background-color: ${(props) => (props.color ? `${props.color}1A` : "#cc416f1A")};
+  color: ${(props) => {
+    if (props.inverted) {
+      return "#ffffff";
+    }
+    return props.color || "#cc415f";
+  }};
+  background-color: ${(props) => {
+    if (props.inverted) {
+      return props.color || "#cc415f";
+    }
+
+    return props.color ? `${props.color}1A` : "#cc416f1A";
+  }};
 `;
 
 export const UserAvatar = styled.img`
