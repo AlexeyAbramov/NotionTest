@@ -13,6 +13,9 @@ export const StatNationTitle = styled.h4`
   font-family: inherit;
 `;
 
+// FIXME: Поправить сетку
 export const StatNationList = styled.div`
-
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 `;

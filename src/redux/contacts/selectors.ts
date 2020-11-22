@@ -58,3 +58,35 @@ export const getPageMap = createSelector(
     return pageArrForMap;
   },
 );
+
+export const getContactStatistic = createSelector([getContacts], (contacts) => {
+  return contacts.reduce(
+    (acc, value) => {
+      acc.collectionsize += 1;
+      if (value.gender === "male") {
+        acc.males += 1;
+      } else if (value.gender === "female") {
+        acc.females += 1;
+      } else {
+        acc.indeterminate += 1;
+      }
+
+      const fullNational = NATIONAL_ABB[value.nat] || value.nat;
+
+      if (!acc.nationals[fullNational]) {
+        acc.nationals[fullNational] = 1;
+      } else {
+        acc.nationals[fullNational] += 1;
+      }
+
+      return acc;
+    },
+    {
+      collectionsize: 0,
+      males: 0,
+      females: 0,
+      indeterminate: 0,
+      nationals: {},
+    },
+  );
+});

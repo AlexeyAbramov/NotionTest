@@ -4,7 +4,7 @@ import { setPage } from "../../redux/contacts/action";
 import { getPageMap } from "../../redux/contacts/selectors";
 import { RootState } from "../../types/redux";
 import { PaginationButton, PaginationContainer } from "./PaginationStyle";
-
+// FIXME: Если очень много страниц, нужно сделать точки, чтобы список страниц не был слишком большим
 const Pagination: React.FC = () => {
   const dispatch = useDispatch();
   const pageMap = useSelector(getPageMap);

@@ -2,12 +2,18 @@ import React from "react";
 import { NationCountBlock } from "../../componentsHelpers/NationCountBlock/NationCountBlock";
 import { StatNationBlockWrapper, StatNationList, StatNationTitle } from "./StatNationBlockStyle";
 
-const StatNationBlock: React.FC = () => {
+export interface StatNationBlockProps {
+  data: { [key: string] : number },
+}
+
+const StatNationBlock: React.FC<StatNationBlockProps> = ({ data }) => {
   return (
     <StatNationBlockWrapper>
       <StatNationTitle>Nationalities</StatNationTitle>
       <StatNationList>
-        <NationCountBlock nation="New Zealander" count="1" />
+        {Object.keys(data).map((national) => (
+          <NationCountBlock key={national} nation={national} count={`${data[national]}`} />
+        ))}
       </StatNationList>
     </StatNationBlockWrapper>
   );
