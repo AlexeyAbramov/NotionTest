@@ -20,6 +20,11 @@ export const TableHead = styled.thead`
 export const TableHeadRow = styled.tr`
   background-color: ${({ theme }) => theme.colors.main_bg};
   font-weight: 600;
+  height: 30px;
+`;
+
+export const TableBodyRow = styled.tr`
+  height: 80px;
 `;
 
 export const TableCell = styled.th<{ width?: string }>`

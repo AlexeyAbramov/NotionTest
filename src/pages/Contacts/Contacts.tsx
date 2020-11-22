@@ -5,12 +5,12 @@ import { SettingPanel } from "../../components/SettingPanel/SettingPanel";
 import { Statistic } from "../../components/Statistic/Statistic";
 import { Table } from "../../components/Table/Table";
 import { fetchContacts } from "../../redux/contacts/action";
-import { RootState } from "../../types/redux";
+import { getSortedContacts } from "../../redux/contacts/selectors";
 import { Container, Header, Title } from "./ContactsStyle";
 
 const Contacts: React.FC = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector((state: RootState) => state.contacts.data);
+  const contacts = useSelector(getSortedContacts);
 
   useEffect(() => {
     dispatch(fetchContacts());

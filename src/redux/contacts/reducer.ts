@@ -1,7 +1,11 @@
-import { ContactActionType, ContactsActions, ContactState } from "./types";
+import { CONTACTS_PER_PAGE } from "../../assets/js/constants";
+import { ContactsSortType, ContactActionType, ContactsActions, ContactState, ContactsViewType } from "./types";
 
 export const initialState: ContactState = {
   data: [],
+  view: ContactsViewType.TABLE_VIEW,
+  contactsPerPage: CONTACTS_PER_PAGE,
+  sortType: ContactsSortType.BY_NAME_AZ,
 };
 
 export const contactsReducer = (state = initialState, action: ContactsActions): ContactState => {

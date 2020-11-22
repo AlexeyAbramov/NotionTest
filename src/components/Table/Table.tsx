@@ -1,6 +1,7 @@
 import React from "react";
 import { getFormatedData } from "../../assets/js/data-convertor";
 import {
+  TableBodyRow,
   TableCell,
   TableContainer,
   TableHead,
@@ -45,7 +46,7 @@ const Table: React.FC<TableProps> = ({ data }) => (
           } = getFormatedData(user);
 
           return (
-            <tr key={phone}>
+            <TableBodyRow key={phone}>
               <TableCell width="5%">
                 <UserAvatar className="cell-image" src={user.picture.thumbnail} alt="avatar" />
               </TableCell>
@@ -67,7 +68,7 @@ const Table: React.FC<TableProps> = ({ data }) => (
                   {national}
                 </UserNation>
               </TableCell>
-            </tr>
+            </TableBodyRow>
           );
         })}
       </tbody>

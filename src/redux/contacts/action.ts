@@ -6,11 +6,6 @@ export const setContacts = (contacts: IUserInfo[]) => ({
   payload: contacts,
 } as const);
 
-export const setError = (error: string) => ({
-  type: ContactActionType.CONTACTS_FETCH_ERROR,
-  payload: error,
-} as const);
-
 export const fetchContacts = () => ({
   type: ContactActionType.CONTACTS_FETCH,
 } as const);

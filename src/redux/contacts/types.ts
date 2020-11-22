@@ -8,8 +8,22 @@ export enum ContactActionType {
   CONTACTS_FETCH_ERROR = "contacts/CONTACTS_FETCH_ERROR",
 }
 
+export enum ContactsSortType {
+  BY_NAME_AZ = "BY_NAME_AZ",
+  BY_NAME_ZA = "BY_NAME_ZA",
+  NOT_SORTED = "NOT_SORTED",
+}
+
+export enum ContactsViewType {
+  TABLE_VIEW = "TABLE_VIEW",
+  TILE_VIEW = "TILE_VIEW",
+}
+
 export interface ContactState {
   readonly data: IUserInfo[],
+  readonly view: ContactsViewType;
+  readonly contactsPerPage: number;
+  readonly sortType: ContactsSortType;
 }
 
 export type ContactsActions = ReturnType<InferValueTypes<typeof actions>>;
