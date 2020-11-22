@@ -4,6 +4,8 @@ import { ContactsSortType } from "./types";
 
 const getContacts = (state: RootState) => state.contacts.data;
 const getSortType = (state: RootState) => state.contacts.sortType;
+const getPageCapacity = (state: RootState) => state.contacts.pageCapacity;
+const getCurrentPage = (state: RootState) => state.contacts.currentPage;
 
 export const getSortedContacts = createSelector(
   [getContacts, getSortType],
@@ -18,5 +20,12 @@ export const getSortedContacts = createSelector(
       default:
         return contacts;
     }
+  },
+);
+
+export const getContactParts = createSelector(
+  [getSortedContacts, getPageCapacity, getCurrentPage],
+  (contacts, pageCapacity, page) => {
+    return contacts.slice(((page - 1) * pageCapacity), (page * pageCapacity));
   },
 );

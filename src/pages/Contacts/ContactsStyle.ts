@@ -15,3 +15,8 @@ export const Title = styled.h1`
   font-size: 3rem;
   font-weight: 700;
 `;
+
+export const MainWrapper = styled.main`
+  display: flex;
+  flex-direction: column;
+`;

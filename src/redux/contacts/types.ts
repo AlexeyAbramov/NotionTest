@@ -22,8 +22,9 @@ export enum ContactsViewType {
 export interface ContactState {
   readonly data: IUserInfo[],
   readonly view: ContactsViewType;
-  readonly contactsPerPage: number;
+  readonly pageCapacity: number;
   readonly sortType: ContactsSortType;
+  readonly currentPage: number;
 }
 
 export type ContactsActions = ReturnType<InferValueTypes<typeof actions>>;

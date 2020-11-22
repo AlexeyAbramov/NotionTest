@@ -4,8 +4,9 @@ import { ContactsSortType, ContactActionType, ContactsActions, ContactState, Con
 export const initialState: ContactState = {
   data: [],
   view: ContactsViewType.TABLE_VIEW,
-  contactsPerPage: CONTACTS_PER_PAGE,
+  pageCapacity: CONTACTS_PER_PAGE,
   sortType: ContactsSortType.BY_NAME_AZ,
+  currentPage: 1,
 };
 
 export const contactsReducer = (state = initialState, action: ContactsActions): ContactState => {
