@@ -4,8 +4,6 @@ import { StatNationBlock } from "../StatNationBlock/StatNationBlock";
 import { StatisticWrapper, StatisticTitle, StatInfoList } from "./StatisticStyle";
 
 const Statistic: React.FC = () => {
-  console.log("statistic render");
-
   return (
     <StatisticWrapper>
       <StatisticTitle>Statistic</StatisticTitle>

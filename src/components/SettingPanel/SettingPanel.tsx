@@ -7,7 +7,6 @@ import { fetchContacts } from "../../redux/contacts/action";
 
 const SettingPanel: React.FC = () => {
   const dispatch = useDispatch();
-  console.log("Render");
 
   const reloadContacts = useCallback(() => {
     dispatch(fetchContacts());
