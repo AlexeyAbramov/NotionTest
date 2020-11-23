@@ -20,4 +20,8 @@ export const PaginationButton = styled.button<{ active?: boolean }>`
   font-weight: 600;
   cursor: pointer;
   font-size: 1.3rem;
+
+  :disabled {
+    opacity: 0.3;
+  }
 `;

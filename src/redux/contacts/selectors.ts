@@ -30,9 +30,15 @@ export const getContactParts = createSelector(
   },
 );
 
-export const getPageCount = createSelector(
+export const getPageMap = createSelector(
   [getSortedContacts, getPageCapacity],
   (contacts, pageCapacity) => {
-    return Math.ceil(contacts.length / pageCapacity);
+    const pageCount = Math.ceil(contacts.length / pageCapacity);
+    const pageArrForMap: number[] = [];
+    for (let i = 1; i <= pageCount; i += 1) {
+      pageArrForMap.push(i);
+    }
+
+    return pageArrForMap;
   },
 );

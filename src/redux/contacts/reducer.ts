@@ -1,5 +1,11 @@
 import { CONTACTS_PER_PAGE } from "../../assets/js/constants";
-import { ContactsSortType, ContactActionType, ContactsActions, ContactState, ContactsViewType } from "./types";
+import {
+  ContactsSortType,
+  ContactActionType,
+  ContactsActions,
+  ContactState,
+  ContactsViewType,
+} from "./types";
 
 export const initialState: ContactState = {
   data: [],
