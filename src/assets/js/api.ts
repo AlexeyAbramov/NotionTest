@@ -7,6 +7,7 @@ export const get = async <T>(url: string): Promise<T> => {
   return result;
 };
 
+// TODO: Обработать ошибки запроса
 export const getContacts = async (): Promise<IUserInfo[]> => {
   const response = await get<UserApiResponse>(GET_CONTACTS_URL);
   return response.results;
