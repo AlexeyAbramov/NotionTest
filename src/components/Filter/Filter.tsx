@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   ClearButton,
   FilterWrapper,
@@ -10,11 +10,13 @@ import {
 } from "./FilterStyle";
 import { ReactComponent as SearchImg } from "../../assets/images/search.svg";
 import { OptionSelect } from "../../componentsHelpers/OptionSelect/OptionSelect";
-import { changeFilterValue } from "../../redux/contactFilter/action";
-
+import { changeFilterValue, resetFilter } from "../../redux/contactFilter/action";
+import { RootState } from "../../types/redux";
+// TODO: Сделать варианты в text инпутах
+// FIXME: Пофиксить множественный переререндер всего внутри.
 const Filter: React.FC = () => {
   const dispatch = useDispatch();
-
+  const filterValues = useSelector((store: RootState) => store.filter);
   // TODO: Типизировать обработчик инпута, добавить debounce
   const onChangeHandler = (evt) => {
     evt.preventDefault();
@@ -22,21 +24,25 @@ const Filter: React.FC = () => {
     dispatch(changeFilterValue(evt.currentTarget.name, value));
   };
 
+  const resetForm = () => {
+    dispatch(resetFilter());
+  };
+
   return (
     <FilterWrapper>
       <FilterForm>
         <InputWrapper width="60%">
-          <FilterInput onChange={onChangeHandler} placeholder="Search by full name" type="text" name="name" />
+          <FilterInput value={filterValues.name} onChange={onChangeHandler} placeholder="Search by full name" type="text" name="name" />
           <FilterSubmit disabled type="submit">
             <SearchImg />
           </FilterSubmit>
         </InputWrapper>
-        <OptionSelect onChange={onChangeHandler} name="gender" />
+        <OptionSelect value={filterValues.gender} onChange={onChangeHandler} name="gender" />
         <InputWrapper width="20%">
-          <FilterInput onChange={onChangeHandler} placeholder="Nationality" type="text" name="nat" />
+          <FilterInput value={filterValues.nat} onChange={onChangeHandler} placeholder="Nationality" type="text" name="nat" />
         </InputWrapper>
       </FilterForm>
-      <ClearButton>Clear</ClearButton>
+      <ClearButton onClick={resetForm}>Clear</ClearButton>
     </FilterWrapper>
   );
 };

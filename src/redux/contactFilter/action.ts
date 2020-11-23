@@ -7,3 +7,7 @@ export const changeFilterValue = (name: PossibleFilterName, value: string) => ({
     value,
   },
 } as const);
+
+export const resetFilter = () => ({
+  type: ContactFilterActionType.RESET_VALUE,
+} as const);

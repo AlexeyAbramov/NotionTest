@@ -16,6 +16,12 @@ export const contactFilterReducer = (
         ...state,
         [action.payload.name]: action.payload.value,
       };
+    case ContactFilterActionType.RESET_VALUE:
+      return {
+        name: "",
+        gender: "",
+        nat: "",
+      };
     default:
       return state;
   }

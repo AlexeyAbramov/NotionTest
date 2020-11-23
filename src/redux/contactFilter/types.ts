@@ -3,6 +3,7 @@ import * as actions from "./action";
 
 export enum ContactFilterActionType {
   CHANGE_VALUE = "contactFilter/CHANGE_VALUE",
+  RESET_VALUE = "contactFilter/RESET_VALUE",
 }
 
 export interface ContactFilterState {
