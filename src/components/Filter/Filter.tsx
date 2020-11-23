@@ -15,10 +15,11 @@ import { changeFilterValue } from "../../redux/contactFilter/action";
 const Filter: React.FC = () => {
   const dispatch = useDispatch();
 
-  // TODO: Типизировать обработчик инпута
+  // TODO: Типизировать обработчик инпута, добавить debounce
   const onChangeHandler = (evt) => {
     evt.preventDefault();
-    dispatch(changeFilterValue(evt.currentTarget.name, evt.currentTarget.value));
+    const value = evt.currentTarget.value.toLowerCase();
+    dispatch(changeFilterValue(evt.currentTarget.name, value));
   };
 
   return (
@@ -26,7 +27,7 @@ const Filter: React.FC = () => {
       <FilterForm>
         <InputWrapper width="60%">
           <FilterInput onChange={onChangeHandler} placeholder="Search by full name" type="text" name="name" />
-          <FilterSubmit type="submit">
+          <FilterSubmit disabled type="submit">
             <SearchImg />
           </FilterSubmit>
         </InputWrapper>

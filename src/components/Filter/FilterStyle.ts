@@ -75,7 +75,7 @@ export const FilterSubmit = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  /* cursor: pointer; */
   height: 4rem;
   width: 4rem;
   background-color: transparent;
