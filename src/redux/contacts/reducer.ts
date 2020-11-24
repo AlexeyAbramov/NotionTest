@@ -9,7 +9,7 @@ import {
 
 export const initialState: ContactState = {
   data: [],
-  view: ContactsViewType.TABLE_VIEW,
+  view: localStorage.getItem("view") as ContactsViewType || ContactsViewType.TABLE_VIEW,
   pageCapacity: CONTACTS_PER_PAGE,
   sortType: ContactsSortType.NOT_SORTED,
   currentPage: 1,
@@ -31,6 +31,11 @@ export const contactsReducer = (state = initialState, action: ContactsActions): 
       return {
         ...state,
         sortType: action.payload,
+      };
+    case ContactActionType.CHANGE_VIEW_TYPE:
+      return {
+        ...state,
+        view: action.payload,
       };
     default:
       return state;

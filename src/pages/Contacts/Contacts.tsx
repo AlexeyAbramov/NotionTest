@@ -10,6 +10,7 @@ import { Container, Header, MainWrapper, Title } from "./ContactsStyle";
 
 const Contacts: React.FC = () => {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);

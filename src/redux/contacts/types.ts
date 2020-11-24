@@ -7,7 +7,8 @@ export enum ContactActionType {
   CONTACTS_FETCH_SUCCESS = "contacts/CONTACTS_FETCH_SUCCESS",
   CONTACTS_FETCH_ERROR = "contacts/CONTACTS_FETCH_ERROR",
   SET_PAGE = "contacts/SET_PAGE",
-  CHANGE_SORT_TYPE = "contacts/CHANGE_SORT_TYPE"
+  CHANGE_SORT_TYPE = "contacts/CHANGE_SORT_TYPE",
+  CHANGE_VIEW_TYPE = "contacts/CHANGE_VIEW_TYPE"
 }
 
 export enum ContactsSortType {
