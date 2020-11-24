@@ -1,5 +1,4 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { getFormatedData } from "../../assets/js/data-convertor";
 import {
   TableBodyRow,
