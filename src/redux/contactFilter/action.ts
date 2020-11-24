@@ -1,11 +1,8 @@
-import { ContactFilterActionType, PossibleFilterName } from "./types";
+import { ContactFilterActionType, ContactFilterState } from "./types";
 
-export const changeFilterValue = (name: PossibleFilterName, value: string) => ({
+export const changeFilterValue = (value: ContactFilterState) => ({
   type: ContactFilterActionType.CHANGE_VALUE,
-  payload: {
-    name,
-    value,
-  },
+  payload: value,
 } as const);
 
 export const resetFilter = () => ({

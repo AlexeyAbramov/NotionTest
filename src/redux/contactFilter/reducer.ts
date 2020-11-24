@@ -12,10 +12,7 @@ export const contactFilterReducer = (
 ): ContactFilterState => {
   switch (action.type) {
     case ContactFilterActionType.CHANGE_VALUE:
-      return {
-        ...state,
-        [action.payload.name]: action.payload.value,
-      };
+      return action.payload;
     case ContactFilterActionType.RESET_VALUE:
       return {
         name: "",

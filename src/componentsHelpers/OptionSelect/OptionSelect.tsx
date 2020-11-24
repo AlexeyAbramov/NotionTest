@@ -1,9 +1,8 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import { OptionContainer, Select } from "./OptionSelectStyle";
 
 export interface OptionSelectProps {
-  // TODO: Продолжение типизирования инпута
-  onChange: (evt) => void,
+  onChange: (evt: ChangeEvent<HTMLSelectElement>) => void,
   value: string,
   name: string,
 }
