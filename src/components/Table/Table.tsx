@@ -13,12 +13,13 @@ import {
 } from "./TableStyle";
 import { IUserInfo } from "../../types/users";
 import { ClipCopy } from "../ClipCopy/ClipCopy";
-import { getContactParts } from "../../redux/contacts/selectors";
 import { SortNameButton } from "../../componentsHelpers/SortNameButton/SortNameButton";
 
-const Table: React.FC = () => {
-  const contacts = useSelector(getContactParts);
+export interface TableProps {
+  data: IUserInfo[],
+}
 
+const Table: React.FC<TableProps> = ({ data }) => {
   return (
     <TableWrapper>
       <TableContainer>
@@ -38,7 +39,7 @@ const Table: React.FC = () => {
           </TableHeadRow>
         </TableHead>
         <tbody>
-          {contacts.map((user: IUserInfo) => {
+          {data.map((user: IUserInfo) => {
             const {
               birthday,
               email,

@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { ContactsView } from "../../components/ContactsView/ContactsView";
 import { Filter } from "../../components/Filter/Filter";
 import { Pagination } from "../../components/Pagination/Pagination";
 import { SettingPanel } from "../../components/SettingPanel/SettingPanel";
 import { Statistic } from "../../components/Statistic/Statistic";
-import { Table } from "../../components/Table/Table";
 import { fetchContacts } from "../../redux/contacts/action";
 import { Container, Header, MainWrapper, Title } from "./ContactsStyle";
 
@@ -23,7 +23,7 @@ const Contacts: React.FC = () => {
       </Header>
       <MainWrapper>
         <Filter />
-        <Table />
+        <ContactsView />
         <Statistic />
         <Pagination />
       </MainWrapper>

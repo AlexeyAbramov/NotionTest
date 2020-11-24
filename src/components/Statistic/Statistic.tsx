@@ -6,7 +6,7 @@ import { StatNationBlock } from "../StatNationBlock/StatNationBlock";
 import { StatisticWrapper, StatisticTitle, StatInfoList } from "./StatisticStyle";
 
 const Statistic: React.FC = () => {
-  // TODO: Типизировать функции в selectore и здесь
+  // TODO: Сделать блок какой пол преобладает
   const statData = useSelector(getContactStatistic);
 
   return (
