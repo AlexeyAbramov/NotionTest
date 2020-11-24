@@ -4,7 +4,7 @@ import { setPage } from "../../redux/contacts/action";
 import { getPageMap } from "../../redux/contacts/selectors";
 import { RootState } from "../../types/redux";
 import { PaginationButton, PaginationContainer } from "./PaginationStyle";
-// FIXME: Если очень много страниц, нужно сделать точки, чтобы список страниц не был слишком большим
+// FIXME: Проблема решена очень частично и криво, нужно доделать
 const Pagination: React.FC = () => {
   const dispatch = useDispatch();
   const pageMap = useSelector(getPageMap);
@@ -25,11 +25,45 @@ const Pagination: React.FC = () => {
       <PaginationButton onClick={setPrevPage} disabled={currentPage === 1}>
         &lt;
       </PaginationButton>
-      {pageMap.map((i) => (
-        <PaginationButton onClick={() => dispatch(setPage(i))} active={currentPage === i} key={i}>
-          {i}
-        </PaginationButton>
-      ))}
+      {pageMap.map((i, index) => {
+        if (index === 0 || index === pageMap.length - 1) {
+          return (
+            <PaginationButton
+              onClick={() => dispatch(setPage(i))}
+              active={currentPage === i}
+              key={i}
+            >
+              {i}
+            </PaginationButton>
+          );
+        }
+
+        if (i >= currentPage - 2 && i <= currentPage + 2) {
+          return (
+            <PaginationButton
+              onClick={() => dispatch(setPage(i))}
+              active={currentPage === i}
+              key={i}
+            >
+              {i}
+            </PaginationButton>
+          );
+        }
+
+        if (i === currentPage - 3 || i === currentPage + 3) {
+          return (
+            <PaginationButton
+              onClick={() => dispatch(setPage(i))}
+              active={currentPage === i}
+              key={i}
+            >
+              ...
+            </PaginationButton>
+          );
+        }
+
+        return null;
+      })}
       <PaginationButton onClick={setNextPage} disabled={currentPage === pageMap.length}>
         &gt;
       </PaginationButton>

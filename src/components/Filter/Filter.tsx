@@ -13,7 +13,6 @@ import { OptionSelect } from "../../componentsHelpers/OptionSelect/OptionSelect"
 import { changeFilterValue, resetFilter } from "../../redux/contactFilter/action";
 import { RootState } from "../../types/redux";
 // TODO: Сделать варианты в text инпутах
-// FIXME: Пофиксить множественный переререндер всего внутри.
 const Filter: React.FC = () => {
   const dispatch = useDispatch();
   const filterValues = useSelector((store: RootState) => store.filter);

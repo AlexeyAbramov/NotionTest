@@ -13,7 +13,6 @@ export const StatNationTitle = styled.h4`
   font-family: inherit;
 `;
 
-// FIXME: Поправить сетку
 export const StatNationList = styled.div`
   display: grid;
   gap: 5px;
