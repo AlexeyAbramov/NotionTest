@@ -1,5 +1,5 @@
 import { IUserInfo } from "../../types/users";
-import { ContactActionType } from "./types";
+import { ContactActionType, ContactsSortType } from "./types";
 
 export const setContacts = (contacts: IUserInfo[]) =>
   ({
@@ -17,3 +17,8 @@ export const setPage = (pageNumber: number) =>
     type: ContactActionType.SET_PAGE,
     payload: pageNumber,
   } as const);
+
+export const changeSortType = (sortType: ContactsSortType) => ({
+  type: ContactActionType.CHANGE_SORT_TYPE,
+  payload: sortType,
+} as const);

@@ -10,7 +10,7 @@ export const ClearButton = styled.button`
   position: relative;
   background-color: transparent;
   border: none;
-  color: ${({ theme }) => theme.colors.main_bg_d};
+  color: ${({ theme }) => theme.colors.mainBgDark};
   padding: 3px 2px 3px 20px;
   font-weight: 600;
   cursor: pointer;
@@ -23,7 +23,7 @@ export const ClearButton = styled.button`
     transform: rotate(45deg);
     width: 14px;
     height: 1px;
-    background-color: ${({ theme }) => theme.colors.main_bg_d};
+    background-color: ${({ theme }) => theme.colors.mainBgDark};
   }
 
   &:before {
@@ -34,7 +34,7 @@ export const ClearButton = styled.button`
     transform: rotate(-45deg);
     width: 14px;
     height: 1px;
-    background-color: ${({ theme }) => theme.colors.main_bg_d};
+    background-color: ${({ theme }) => theme.colors.mainBgDark};
   }
 `;
 
@@ -52,7 +52,7 @@ export const FilterForm = styled.form`
 export const FilterInput = styled.input`
   padding: 0 10px;
   width: 100%;
-  border: 1px solid ${({ theme }) => theme.colors.main_bg_d};
+  border: 1px solid ${({ theme }) => theme.colors.mainBgDark};
   font-family: inherit;
 
   &:first-child {
@@ -67,7 +67,7 @@ export const FilterInput = styled.input`
 
   &:only-child {
     border-radius: 3px;
-    border: 1px solid ${({ theme }) => theme.colors.main_bg_d};
+    border: 1px solid ${({ theme }) => theme.colors.mainBgDark};
   }
 `;
 
@@ -79,7 +79,7 @@ export const FilterSubmit = styled.button`
   height: 4rem;
   width: 4rem;
   background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.colors.main_bg_d};
+  border: 1px solid ${({ theme }) => theme.colors.mainBgDark};
   &:first-child {
     border-radius: 3px 0 0 3px;
   }

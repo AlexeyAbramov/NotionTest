@@ -8,7 +8,7 @@ export const TableWrapper = styled(ContainerStyle)`
 export const TableContainer = styled.table`
   width: 100%;
   border-collapse: collapse;
-  background-color: ${({ theme }) => theme.colors.second_bg};
+  background-color: ${({ theme }) => theme.colors.secondBg};
   text-align: left;
   font-size: 1.2rem;
 `;
@@ -18,7 +18,7 @@ export const TableHead = styled.thead`
 `;
 
 export const TableHeadRow = styled.tr`
-  background-color: ${({ theme }) => theme.colors.main_bg};
+  background-color: ${({ theme }) => theme.colors.mainBg};
   font-weight: 600;
   height: 30px;
 `;
@@ -29,7 +29,7 @@ export const TableBodyRow = styled.tr`
 
 export const TableCell = styled.th<{ width?: string }>`
   font-weight: inherit;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.main_bg};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.mainBg};
   width: ${(props) => props.width || "16%"};
   padding: 0.7rem;
   white-space: pre-wrap;

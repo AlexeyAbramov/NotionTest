@@ -24,7 +24,7 @@ export const OptionContainer = styled.div`
   position: relative;
   display: flex;
   width: 30%;
-  border: 1px solid ${({ theme }) => theme.colors.main_bg_d};
+  border: 1px solid ${({ theme }) => theme.colors.mainBgDark};
   border-radius: 3px;
   overflow: hidden;
   height: 100%;
@@ -40,8 +40,8 @@ export const OptionContainer = styled.div`
     height: 10px;
     pointer-events: none;
     transition: border 0.3s ease;
-    border-top: 2px solid ${({ theme }) => theme.colors.main_bg_d};
-    border-right: 2px solid ${({ theme }) => theme.colors.main_bg_d};
+    border-top: 2px solid ${({ theme }) => theme.colors.mainBgDark};
+    border-right: 2px solid ${({ theme }) => theme.colors.mainBgDark};
     transform: rotate(135deg) translate(-50%, 50%);
   }
 

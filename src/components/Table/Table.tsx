@@ -14,6 +14,7 @@ import {
 import { IUserInfo } from "../../types/users";
 import { ClipCopy } from "../ClipCopy/ClipCopy";
 import { getContactParts } from "../../redux/contacts/selectors";
+import { SortNameButton } from "../../componentsHelpers/SortNameButton/SortNameButton";
 
 const Table: React.FC = () => {
   const contacts = useSelector(getContactParts);
@@ -26,7 +27,9 @@ const Table: React.FC = () => {
             <TableCell width="7rem" align="center">
               Avatar
             </TableCell>
-            <TableCell>Full name</TableCell>
+            <TableCell>
+              <SortNameButton>Full name</SortNameButton>
+            </TableCell>
             <TableCell>Birthday</TableCell>
             <TableCell>Email</TableCell>
             <TableCell>Phone</TableCell>

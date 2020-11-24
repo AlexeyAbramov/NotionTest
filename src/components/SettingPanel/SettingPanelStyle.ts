@@ -10,7 +10,7 @@ export const ReloadButton = styled.button`
   margin: 0px 10px;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px dashed ${({ theme }) => theme.colors.main_bg_d};
+  border: 1px dashed ${({ theme }) => theme.colors.mainBgDark};
   width: 30px;
   height: 30px;
   padding: 6px;

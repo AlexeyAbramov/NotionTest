@@ -1,15 +1,15 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, DefaultTheme } from "styled-components";
 
-export const theme = {
+export const theme: DefaultTheme = {
   defPadding: "2rem",
   defFont: "'Open Sans', sans-serif",
 
   colors: {
     font: "#252525",
     links: "#2aa2ff",
-    main_bg: "#f0f0f0",
-    main_bg_d: "#999999",
-    second_bg: "#ffffff",
+    mainBg: "#f0f0f0",
+    mainBgDark: "#999999",
+    secondBg: "#ffffff",
   },
 };
 

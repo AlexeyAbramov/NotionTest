@@ -11,7 +11,7 @@ export const initialState: ContactState = {
   data: [],
   view: ContactsViewType.TABLE_VIEW,
   pageCapacity: CONTACTS_PER_PAGE,
-  sortType: ContactsSortType.BY_NAME_AZ,
+  sortType: ContactsSortType.NOT_SORTED,
   currentPage: 1,
 };
 
@@ -26,6 +26,11 @@ export const contactsReducer = (state = initialState, action: ContactsActions): 
       return {
         ...state,
         currentPage: action.payload,
+      };
+    case ContactActionType.CHANGE_SORT_TYPE:
+      return {
+        ...state,
+        sortType: action.payload,
       };
     default:
       return state;
