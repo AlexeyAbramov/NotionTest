@@ -15,7 +15,7 @@ const ContactsView: React.FC = () => {
   }
 
   if (viewType === ContactsViewType.TILE_VIEW) {
-    return <TilesList />;
+    return <TilesList data={contacts} />;
   }
 
   return null;
