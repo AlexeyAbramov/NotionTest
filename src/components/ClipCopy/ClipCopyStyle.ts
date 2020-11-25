@@ -2,9 +2,17 @@ import styled from "styled-components";
 import { ReactComponent as CopyImg } from "../../assets/images/copy.svg";
 import { opacityInAnim } from "../../assets/styles/CommonAnimation";
 
-export const ClipWrapper = styled.div`
+interface ClipWrapperProps {
+  alignCenter?: boolean;
+}
+
+interface ClipButtonProps {
+  alignCenter?: boolean;
+}
+
+export const ClipWrapper = styled.div<ClipWrapperProps>`
   display: flex;
-  align-items: flex-start;
+  align-items: ${({ alignCenter }) => (alignCenter ? "center" : "flex-start")};
 `;
 
 export const ClipImage = styled(CopyImg)`
@@ -15,13 +23,22 @@ export const ClipImage = styled(CopyImg)`
   transition: opacity 0.3s ease;
 `;
 
-export const ClipButton = styled.button`
+export const ClipButton = styled.button<ClipButtonProps>`
   position: relative;
   border: none;
   background-color: transparent;
   cursor: pointer;
   margin-right: 5px;
   margin-top: 2px;
+
+  ${({ alignCenter }) =>
+    alignCenter
+    && `
+    display: flex;
+    margin-top: 1px;
+    justify-content: center;
+    align-items: center;
+  `}
 
   :focus {
     outline: none;

@@ -5,9 +5,10 @@ import { ClipButton, ClipImage, ClipWrapper, SuccessMessage } from "./ClipCopySt
 
 export interface ClipCopyProp {
   href?: string;
+  alignCenter?: boolean;
 }
 
-const ClipCopy: React.FC<ClipCopyProp> = ({ children, href }) => {
+const ClipCopy: React.FC<ClipCopyProp> = ({ children, href, alignCenter }) => {
   const [successCopy, setSuccessCopy] = useState(false);
 
   const copyToClip = () => {
@@ -21,8 +22,8 @@ const ClipCopy: React.FC<ClipCopyProp> = ({ children, href }) => {
   };
 
   return (
-    <ClipWrapper>
-      <ClipButton type="button" onClick={copyToClip}>
+    <ClipWrapper alignCenter={alignCenter}>
+      <ClipButton alignCenter={alignCenter} type="button" onClick={copyToClip}>
         <ClipImage />
         {successCopy && <SuccessMessage>Скопировано!</SuccessMessage>}
       </ClipButton>

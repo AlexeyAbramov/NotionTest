@@ -4,6 +4,7 @@ export const TextGroupWrapper = styled.div`
   display: flex;
   font-size: 1.1rem;
   align-items: center;
+  /* height: 3rem; */
 `;
 
 export const TextGroupTitle = styled.p`
