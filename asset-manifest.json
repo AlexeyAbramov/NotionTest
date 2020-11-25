@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/NotionTest/static/js/main.d1a09514.chunk.js",
-    "main.js.map": "/NotionTest/static/js/main.d1a09514.chunk.js.map",
+    "main.js": "/NotionTest/static/js/main.abe96cf4.chunk.js",
+    "main.js.map": "/NotionTest/static/js/main.abe96cf4.chunk.js.map",
     "runtime-main.js": "/NotionTest/static/js/runtime-main.3c69e05a.js",
     "runtime-main.js.map": "/NotionTest/static/js/runtime-main.3c69e05a.js.map",
-    "static/js/2.c1b45f2e.chunk.js": "/NotionTest/static/js/2.c1b45f2e.chunk.js",
-    "static/js/2.c1b45f2e.chunk.js.map": "/NotionTest/static/js/2.c1b45f2e.chunk.js.map",
+    "static/js/2.9a83c322.chunk.js": "/NotionTest/static/js/2.9a83c322.chunk.js",
+    "static/js/2.9a83c322.chunk.js.map": "/NotionTest/static/js/2.9a83c322.chunk.js.map",
     "index.html": "/NotionTest/index.html",
-    "static/js/2.c1b45f2e.chunk.js.LICENSE.txt": "/NotionTest/static/js/2.c1b45f2e.chunk.js.LICENSE.txt",
+    "static/js/2.9a83c322.chunk.js.LICENSE.txt": "/NotionTest/static/js/2.9a83c322.chunk.js.LICENSE.txt",
     "static/media/blocks.f72aca77.svg": "/NotionTest/static/media/blocks.f72aca77.svg",
     "static/media/copy.7fb2eccc.svg": "/NotionTest/static/media/copy.7fb2eccc.svg",
     "static/media/list.fef2b443.svg": "/NotionTest/static/media/list.fef2b443.svg",
@@ -17,7 +17,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.3c69e05a.js",
-    "static/js/2.c1b45f2e.chunk.js",
-    "static/js/main.d1a09514.chunk.js"
+    "static/js/2.9a83c322.chunk.js",
+    "static/js/main.abe96cf4.chunk.js"
   ]
 }
