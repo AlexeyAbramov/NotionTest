@@ -37,6 +37,7 @@ const Filter: React.FC = () => {
     dispatch(changeFilterValue(debouncedFilterState));
   }, [debouncedFilterState, dispatch]);
 
+  // FIXME: Не сбрасывает форму, пофиксить
   const resetForm = () => {
     dispatch(resetFilter());
   };
