@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/NotionTest/static/js/main.39a2c324.chunk.js",
-    "main.js.map": "/NotionTest/static/js/main.39a2c324.chunk.js.map",
+    "main.js": "/NotionTest/static/js/main.3bb45057.chunk.js",
+    "main.js.map": "/NotionTest/static/js/main.3bb45057.chunk.js.map",
     "runtime-main.js": "/NotionTest/static/js/runtime-main.3c69e05a.js",
     "runtime-main.js.map": "/NotionTest/static/js/runtime-main.3c69e05a.js.map",
     "static/js/2.9a83c322.chunk.js": "/NotionTest/static/js/2.9a83c322.chunk.js",
@@ -18,6 +18,6 @@
   "entrypoints": [
     "static/js/runtime-main.3c69e05a.js",
     "static/js/2.9a83c322.chunk.js",
-    "static/js/main.39a2c324.chunk.js"
+    "static/js/main.3bb45057.chunk.js"
   ]
 }
