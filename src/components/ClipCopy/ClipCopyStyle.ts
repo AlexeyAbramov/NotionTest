@@ -12,6 +12,9 @@ interface ClipButtonProps {
 
 export const ClipWrapper = styled.div<ClipWrapperProps>`
   display: flex;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
   align-items: ${({ alignCenter }) => (alignCenter ? "center" : "flex-start")};
 `;
 
@@ -62,4 +65,18 @@ export const SuccessMessage = styled.p`
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   font-size: 1.1rem;
+`;
+
+export const ClipCopyContentText = styled.p`
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+`;
+
+export const ClipCopyContentLink = styled.a`
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
 `;

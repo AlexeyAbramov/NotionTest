@@ -1,4 +1,5 @@
 import { createGlobalStyle, DefaultTheme } from "styled-components";
+import { device } from "./assets/styles/media";
 
 export const theme: DefaultTheme = {
   defPadding: "2rem",
@@ -37,5 +38,11 @@ export const GlobalStyle = createGlobalStyle`
 
   #root {
     position: relative;
+  }
+
+  @media ${device.tablet} {
+    html {
+      font-size: 50%;
+    }
   }
 `;

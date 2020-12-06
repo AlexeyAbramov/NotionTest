@@ -8,13 +8,20 @@ export const TileContainer = styled.div`
 `;
 
 export const TileImageWrapper = styled.picture`
-  height: 128px;
-  width: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: content-box;
+  overflow: hidden;
+  min-height: 12.8rem;
+  min-width: 12.8rem;
+  max-width: 12.8rem;
+  max-height: 12.8rem;
   margin-right: 1rem;
 `;
 
 export const TileImage = styled.img`
-  display: block;
+  display: flex;
 `;
 
 export const TileInfoWrapper = styled.div`

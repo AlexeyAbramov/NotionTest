@@ -15,7 +15,7 @@ import { ClipCopy } from "../ClipCopy/ClipCopy";
 import { SortNameButton } from "../../componentsHelpers/SortNameButton/SortNameButton";
 
 export interface TableProps {
-  data: IUserInfo[],
+  data: IUserInfo[];
 }
 
 const Table: React.FC<TableProps> = ({ data }) => {
@@ -34,7 +34,7 @@ const Table: React.FC<TableProps> = ({ data }) => {
             <TableCell>Email</TableCell>
             <TableCell>Phone</TableCell>
             <TableCell>Location</TableCell>
-            <TableCell align="right">Nationality</TableCell>
+            <TableCell addaptiveHide align="right">Nationality</TableCell>
           </TableHeadRow>
         </TableHead>
         <tbody>
@@ -67,7 +67,7 @@ const Table: React.FC<TableProps> = ({ data }) => {
                 <TableCell>
                   <ClipCopy>{location}</ClipCopy>
                 </TableCell>
-                <TableCell align="right">
+                <TableCell addaptiveHide align="right">
                   <UserNation color={nationalColor.color} inverted={nationalColor.inverted}>
                     {national}
                   </UserNation>
