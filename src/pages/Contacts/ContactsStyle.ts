@@ -1,7 +1,16 @@
 import styled from "styled-components";
+import { device } from "../../assets/styles/media";
 
 export const Container = styled.div`
   padding: 0 2rem;
+
+  @media ${device.laptop} {
+    padding: 0 1rem;
+  }
+
+  @media ${device.mobileL} {
+    padding: 0 0.5rem;
+  }
 `;
 
 export const Header = styled.header`

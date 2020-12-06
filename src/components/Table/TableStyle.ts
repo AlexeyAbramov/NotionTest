@@ -13,6 +13,10 @@ export const TableContainer = styled.table`
   background-color: ${({ theme }) => theme.colors.secondBg};
   text-align: left;
   font-size: 1.2rem;
+
+  @media ${device.laptop} {
+    font-size: 1.1rem;
+  }
 `;
 
 export const TableHead = styled.thead`
@@ -36,7 +40,6 @@ interface TableCellProps {
 
 export const TableCell = styled.th<TableCellProps>`
   font-weight: inherit;
-  overflow: hidden;
   white-space: pre-wrap;
   word-wrap: break-word;
   text-overflow: ellipsis;
@@ -47,6 +50,7 @@ export const TableCell = styled.th<TableCellProps>`
   text-align: ${(props) => props.align || "left"};
 
   @media ${device.tablet} {
+    padding: 0.3rem;
     ${({ addaptiveHide }) => (addaptiveHide ? "display: none" : "")}
   }
 `;

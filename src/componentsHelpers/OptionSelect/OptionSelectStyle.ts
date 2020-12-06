@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../assets/styles/media";
 
 export const Select = styled.select`
   appearance: none;
@@ -23,7 +24,8 @@ export const Select = styled.select`
 export const OptionContainer = styled.div`
   position: relative;
   display: flex;
-  width: 30%;
+  min-width: 10rem;
+  flex-grow: 1;
   border: 1px solid ${({ theme }) => theme.colors.mainBgDark};
   border-radius: 3px;
   overflow: hidden;
@@ -48,5 +50,9 @@ export const OptionContainer = styled.div`
   &:hover:after {
     border-top: 2px solid ${({ theme }) => theme.colors.links};
     border-right: 2px solid ${({ theme }) => theme.colors.links};
+  }
+
+  @media ${device.tablet} {
+    margin: 0.5rem;
   }
 `;
